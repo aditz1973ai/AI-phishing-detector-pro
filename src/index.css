@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+    --font-heading: 'Georgia', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Courier New', monospace;
+    
+    --color-background: #080808;
+    --color-foreground: #f0f0f0;
+    
+    --color-card: #121212;
+    --color-card-foreground: #f0f0f0;
+    
+    --color-popover: #121212;
+    --color-popover-foreground: #f0f0f0;
+    
+    --color-primary: #ff4b4b;
+    --color-primary-foreground: #ffffff;
+    
+    --color-secondary: #1a1a1a;
+    --color-secondary-foreground: #f0f0f0;
+    
+    --color-muted: #1a1a1a;
+    --color-muted-foreground: #a0a0a0;
+    
+    --color-accent: #ffcc00;
+    --color-accent-foreground: #080808;
+    
+    --color-destructive: #ff4b4b;
+    --color-destructive-foreground: #ffffff;
+    
+    --color-border: #2a2a2a;
+    --color-input: #2a2a2a;
+    --color-ring: #ff4b4b;
+}
+
+:root {
+    --background: #080808;
+    --foreground: #f0f0f0;
+    --card: #121212;
+    --card-foreground: #f0f0f0;
+    --popover: #121212;
+    --popover-foreground: #f0f0f0;
+    --primary: #ff4b4b;
+    --primary-foreground: #ffffff;
+    --secondary: #1a1a1a;
+    --secondary-foreground: #f0f0f0;
+    --muted: #1a1a1a;
+    --muted-foreground: #a0a0a0;
+    --accent: #ffcc00;
+    --accent-foreground: #080808;
+    --destructive: #ff4b4b;
+    --border: #2a2a2a;
+    --input: #2a2a2a;
+    --ring: #ff4b4b;
+    --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground font-sans;
+    }
+}
+
+.panel-label {
+  @apply text-[10px] uppercase tracking-[1.5px] text-muted-foreground mb-5 block font-sans font-semibold;
+}
+
+.score-circle-outer {
+  @apply relative flex items-center justify-center w-[140px] h-[140px] rounded-full border-8 border-border;
+}
+
+.score-circle-progress {
+  @apply absolute -inset-2 rounded-full border-8 border-primary border-b-transparent border-r-transparent;
+}
